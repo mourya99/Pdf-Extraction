@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20221222 04:59:52.621" rpa="true" schemaversion="3">
+<suite id="s1" name="Consumer" source="c:\Users\mourya.dinesh\Documents\python bot\consumer.robot">
+<test id="s1-t1" name="Battery Patch pdf file data extraction" line="28">
+<kw name="For Each Input Work Item" library="RPA.Robocloud.Items">
+<var>${PDF Path}</var>
+<arg>load work iteams</arg>
+<doc>Run a keyword or function for each work item in the input queue.</doc>
+<kw name="load work iteams">
+<kw name="Get Work Item Variables" library="RPA.Robocloud.Items">
+<var>${work iteams}</var>
+<doc>Read all variables from the current work item and
+return their names and values as a dictionary.</doc>
+<msg timestamp="20221222 04:59:59.668" level="INFO">${work iteams} = {'name': 'C:/Users/mourya.dinesh/Desktop/pdf/36010 Attachment_B_SWI 204_Rev I pg 12.pdf'}</msg>
+<status status="PASS" starttime="20221222 04:59:59.668" endtime="20221222 04:59:59.676"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${PDF Path}</var>
+<arg>${work iteams}[name]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221222 04:59:59.679" level="INFO">${PDF Path} = C:/Users/mourya.dinesh/Desktop/pdf/36010 Attachment_B_SWI 204_Rev I pg 12.pdf</msg>
+<status status="PASS" starttime="20221222 04:59:59.677" endtime="20221222 04:59:59.679"/>
+</kw>
+<return>
+<value>${PDF Path}</value>
+<status status="PASS" starttime="20221222 04:59:59.680" endtime="20221222 04:59:59.680"/>
+</return>
+<status status="PASS" starttime="20221222 04:59:59.667" endtime="20221222 04:59:59.681"/>
+</kw>
+<msg timestamp="20221222 04:59:59.681" level="INFO">Releasing item '0' with COMPLETED state and exception: None</msg>
+<kw name="load work iteams">
+<kw name="Get Work Item Variables" library="RPA.Robocloud.Items">
+<var>${work iteams}</var>
+<doc>Read all variables from the current work item and
+return their names and values as a dictionary.</doc>
+<msg timestamp="20221222 04:59:59.683" level="INFO">${work iteams} = {'name': 'C:/Users/mourya.dinesh/Desktop/pdf/36010 Attachment_B_SWI 204_Rev I pg 13.pdf'}</msg>
+<status status="PASS" starttime="20221222 04:59:59.683" endtime="20221222 04:59:59.684"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${PDF Path}</var>
+<arg>${work iteams}[name]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221222 04:59:59.685" level="INFO">${PDF Path} = C:/Users/mourya.dinesh/Desktop/pdf/36010 Attachment_B_SWI 204_Rev I pg 13.pdf</msg>
+<status status="PASS" starttime="20221222 04:59:59.684" endtime="20221222 04:59:59.685"/>
+</kw>
+<return>
+<value>${PDF Path}</value>
+<status status="PASS" starttime="20221222 04:59:59.686" endtime="20221222 04:59:59.686"/>
+</return>
+<status status="PASS" starttime="20221222 04:59:59.682" endtime="20221222 04:59:59.688"/>
+</kw>
+<msg timestamp="20221222 04:59:59.689" level="INFO">Releasing item '1' with COMPLETED state and exception: None</msg>
+<kw name="load work iteams">
+<kw name="Get Work Item Variables" library="RPA.Robocloud.Items">
+<var>${work iteams}</var>
+<doc>Read all variables from the current work item and
+return their names and values as a dictionary.</doc>
+<msg timestamp="20221222 04:59:59.692" level="INFO">${work iteams} = {'name': 'C:/Users/mourya.dinesh/Desktop/pdf/36010 Attachment_B_SWI 204_Rev I pg 14.pdf'}</msg>
+<status status="PASS" starttime="20221222 04:59:59.691" endtime="20221222 04:59:59.693"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${PDF Path}</var>
+<arg>${work iteams}[name]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221222 04:59:59.694" level="INFO">${PDF Path} = C:/Users/mourya.dinesh/Desktop/pdf/36010 Attachment_B_SWI 204_Rev I pg 14.pdf</msg>
+<status status="PASS" starttime="20221222 04:59:59.693" endtime="20221222 04:59:59.694"/>
+</kw>
+<return>
+<value>${PDF Path}</value>
+<status status="PASS" starttime="20221222 04:59:59.695" endtime="20221222 04:59:59.695"/>
+</return>
+<status status="PASS" starttime="20221222 04:59:59.690" endtime="20221222 04:59:59.695"/>
+</kw>
+<msg timestamp="20221222 04:59:59.696" level="INFO">Releasing item '2' with COMPLETED state and exception: None</msg>
+<msg timestamp="20221222 04:59:59.696" level="INFO">${PDF Path} = ['C:/Users/mourya.dinesh/Desktop/pdf/36010 Attachment_B_SWI 204_Rev I pg 12.pdf', 'C:/Users/mourya.dinesh/Desktop/pdf/36010 Attachment_B_SWI 204_Rev I pg 13.pdf', 'C:/Users/mourya.dinesh/Desktop/pdf/3...</msg>
+<status status="PASS" starttime="20221222 04:59:59.665" endtime="20221222 04:59:59.696"/>
+</kw>
+<kw name="Create Workbook" library="RPA.Excel.Files">
+<arg>C:/Users/mourya.dinesh/Documents/python bot/op.xlsx</arg>
+<doc>Create and open a new Excel workbook.</doc>
+<status status="PASS" starttime="20221222 04:59:59.698" endtime="20221222 04:59:59.711"/>
+</kw>
+<kw name="validate the input files">
+<var>${PDF}</var>
+<kw name="List Files In Directory" library="RPA.FileSystem">
+<var>${PDF}</var>
+<arg>C:/Users/mourya.dinesh/Desktop/pdf</arg>
+<doc>Lists all the files in the given directory, relative to it.</doc>
+<msg timestamp="20221222 04:59:59.719" level="INFO">${PDF} = [File(path='C:\\Users\\mourya.dinesh\\Desktop\\pdf\\36010 Attachment_B_SWI 204_Rev I pg 12.pdf', name='36010 Attachment_B_SWI 204_Rev I pg 12.pdf', size=184618, mtime=1669230426.1919668), File(path='C...</msg>
+<status status="PASS" starttime="20221222 04:59:59.714" endtime="20221222 04:59:59.720"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${PDF}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221222 04:59:59.724" level="INFO">[File(path='C:\\Users\\mourya.dinesh\\Desktop\\pdf\\36010 Attachment_B_SWI 204_Rev I pg 12.pdf', name='36010 Attachment_B_SWI 204_Rev I pg 12.pdf', size=184618, mtime=1669230426.1919668), File(path='C:\\Users\\mourya.dinesh\\Desktop\\pdf\\36010 Attachment_B_SWI 204_Rev I pg 13.pdf', name='36010 Attachment_B_SWI 204_Rev I pg 13.pdf', size=185693, mtime=1669230408.3612902), File(path='C:\\Users\\mourya.dinesh\\Desktop\\pdf\\36010 Attachment_B_SWI 204_Rev I pg 14.pdf', name='36010 Attachment_B_SWI 204_Rev I pg 14.pdf', size=185698, mtime=1669230418.304549)]</msg>
+<status status="PASS" starttime="20221222 04:59:59.723" endtime="20221222 04:59:59.725"/>
+</kw>
+<return>
+<value>${PDF}</value>
+<status status="PASS" starttime="20221222 04:59:59.726" endtime="20221222 04:59:59.727"/>
+</return>
+<msg timestamp="20221222 04:59:59.727" level="INFO">${PDF} = [File(path='C:\\Users\\mourya.dinesh\\Desktop\\pdf\\36010 Attachment_B_SWI 204_Rev I pg 12.pdf', name='36010 Attachment_B_SWI 204_Rev I pg 12.pdf', size=184618, mtime=1669230426.1919668), File(path='C...</msg>
+<status status="PASS" starttime="20221222 04:59:59.712" endtime="20221222 04:59:59.728"/>
+</kw>
+<for flavor="IN">
+<var>${files}</var>
+<value>@{PDF Path}</value>
+<iter>
+<var name="${files}">C:/Users/mourya.dinesh/Desktop/pdf/36010 Attachment_B_SWI 204_Rev I pg 12.pdf</var>
+<kw name="check tha correct path">
+<arg>${files}</arg>
+<kw name="Normalize Path" library="RPA.FileSystem">
+<var>${st}</var>
+<arg>${files}</arg>
+<doc>Removes redundant separators or up-level references from path.</doc>
+<msg timestamp="20221222 04:59:59.732" level="INFO">${st} = C:\Users\mourya.dinesh\Desktop\pdf\36010 Attachment_B_SWI 204_Rev I pg 12.pdf</msg>
+<status status="PASS" starttime="20221222 04:59:59.731" endtime="20221222 04:59:59.732"/>
+</kw>
+<status status="PASS" starttime="20221222 04:59:59.730" endtime="20221222 04:59:59.732"/>
+</kw>
+<kw name="check wheather it is a pdf or not">
+<arg>${files}</arg>
+<kw name="Get File Extension" library="RPA.FileSystem">
+<var>${var}</var>
+<arg>${files}</arg>
+<doc>Returns the suffix for the file.</doc>
+<msg timestamp="20221222 04:59:59.735" level="INFO">${var} = .pdf</msg>
+<status status="PASS" starttime="20221222 04:59:59.733" endtime="20221222 04:59:59.735"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${var}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221222 04:59:59.736" level="INFO">.pdf</msg>
+<status status="PASS" starttime="20221222 04:59:59.735" endtime="20221222 04:59:59.736"/>
+</kw>
+<status status="PASS" starttime="20221222 04:59:59.733" endtime="20221222 04:59:59.736"/>
+</kw>
+<kw name="check the lenght of pdf">
+<arg>${files}</arg>
+<kw name="Get Length" library="BuiltIn">
+<var>${length}</var>
+<arg>${files}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20221222 04:59:59.742" level="INFO">Length is 77</msg>
+<msg timestamp="20221222 04:59:59.744" level="INFO">${length} = 77</msg>
+<status status="PASS" starttime="20221222 04:59:59.738" endtime="20221222 04:59:59.745"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${length}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221222 04:59:59.748" level="INFO">77</msg>
+<status status="PASS" starttime="20221222 04:59:59.747" endtime="20221222 04:59:59.749"/>
+</kw>
+<status status="PASS" starttime="20221222 04:59:59.736" endtime="20221222 04:59:59.750"/>
+</kw>
+<kw name="validate text from pdf and extract data">
+<arg>${files}</arg>
+<kw name="Get Text From Pdf" library="RPA.PDF">
+<var>${text}</var>
+<arg>${files}</arg>
+<arg>trim=False</arg>
+<doc>Get text from set of pages in source PDF document.</doc>
+<msg timestamp="20221222 05:00:00.637" level="INFO">${text} = {1: ' \nSWI 204 \nREVISION:  I \nTITLE: \nF827 WBM Field Programming Fixture Operating Procedure \nAttachment  B: WBM Software Update Data Sheet \nCustomer Information  (Name, City, etc.) \nISSUE DATE...</msg>
+<status status="PASS" starttime="20221222 04:59:59.760" endtime="20221222 05:00:00.638"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221222 05:00:00.643" level="INFO">{1: ' \nSWI 204 \nREVISION:  I \nTITLE: \nF827 WBM Field Programming Fixture Operating Procedure \nAttachment  B: WBM Software Update Data Sheet \nCustomer Information  (Name, City, etc.) \nISSUE DATE: \nSEE STAMP \nEFFECTIVE DATE:  \nSEE STAMP \nPAGE 1 OF 1 \nF827 Asset Number \n \nVisual identifier Used? \nidentifier or attach a duplicate to this page:  \nUsing the matrix below, select the WBM software to be installed. *Only one pump/WBM combination may be selected per datasheet. \n Yes – Describe the \n No \n \nCompatible Module type \nSoftware PN / Version to be installed  \nCompatible \nPump Version \nV6 \nV6.02.xx \nV6.05.xx  \nV8 \nV6, V8 \nV6, V8, V9 \nV6, V8, V9 \nPN 35783, Version 16D38 (B &amp; B/G) \nPN 35783, Version 16D38 (B &amp; B/G) \nPN 35784, Version 17D19 (B/G) \nPN 35784, Version 20D32 (A/B/G/N) \nPN 35785, Version 22D28 (A/B/G/N) \nPN 35785, Version 22D28 (A/B/G/N) \nModule Type: \nVersion of Software to Be Installed: \n \n \nhe MAC Addresses below have been verified to be updated to the software version selected above \nMAC Addresses \n \n \n \n \n  T\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nName (print) \n \n \n \nSignature  \n \nDate \n \n \nBAXTER CONFIDENTIAL – INTERNAL USE ONLY \n35083 \n35162 \n35195 \n35223 \n36010 \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nAttachment B_SWI 204/I\n'}</msg>
+<status status="PASS" starttime="20221222 05:00:00.640" endtime="20221222 05:00:00.644"/>
+</kw>
+<status status="PASS" starttime="20221222 04:59:59.752" endtime="20221222 05:00:00.645"/>
+</kw>
+<kw name="extract text data from pdf and import to Excel">
+<var>${result}</var>
+<arg>${files}</arg>
+<kw name="Pdfreader" library="task">
+<var>${result}</var>
+<arg>${files}</arg>
+<msg timestamp="20221222 05:00:00.707" level="INFO">22D28</msg>
+<msg timestamp="20221222 05:00:00.708" level="INFO">${result} = (['Version Type:', 'MAC-1:', 'MAC-2:', 'MAC-3:', 'MAC-4:', 'MAC-5:', 'MAC-6:', 'MAC-7:', 'MAC-15:', 'MAC-16:', 'MAC-17:', 'MAC-18:', 'MAC-19:', 'MAC-20:', 'MAC-21:', 'MAC-29:', 'MAC-30:', 'MAC-31:', '...</msg>
+<status status="PASS" starttime="20221222 05:00:00.647" endtime="20221222 05:00:00.709"/>
+</kw>
+<kw name="Get File Name" library="RPA.FileSystem">
+<var>${output}</var>
+<arg>${files}</arg>
+<doc>Returns only the full file name portion of a path.</doc>
+<msg timestamp="20221222 05:00:00.710" level="INFO">${output} = 36010 Attachment_B_SWI 204_Rev I pg 12.pdf</msg>
+<status status="PASS" starttime="20221222 05:00:00.709" endtime="20221222 05:00:00.711"/>
+</kw>
+<kw name="Split String" library="String">
+<var>${output}</var>
+<arg>${output}</arg>
+<arg>separator=SWI</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20221222 05:00:00.712" level="INFO">${output} = ['36010 Attachment_B_', ' 204_Rev I pg 12.pdf']</msg>
+<status status="PASS" starttime="20221222 05:00:00.711" endtime="20221222 05:00:00.712"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${result1}</var>
+<arg>version=${result}[0]</arg>
+<arg>Mac_id=${result}[1]</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20221222 05:00:00.713" level="INFO">${result1} = {'version': ['Version Type:', 'MAC-1:', 'MAC-2:', 'MAC-3:', 'MAC-4:', 'MAC-5:', 'MAC-6:', 'MAC-7:', 'MAC-15:', 'MAC-16:', 'MAC-17:', 'MAC-18:', 'MAC-19:', 'MAC-20:', 'MAC-21:', 'MAC-29:', 'MAC-30:', '...</msg>
+<status status="PASS" starttime="20221222 05:00:00.712" endtime="20221222 05:00:00.714"/>
+</kw>
+<kw name="Set Worksheet Value" library="RPA.Excel.Files">
+<arg>1</arg>
+<arg>1</arg>
+<arg>Name</arg>
+<doc>Alias for keyword ``Set cell value``, see the original keyword
+for documentation.</doc>
+<status status="PASS" starttime="20221222 05:00:00.714" endtime="20221222 05:00:00.715"/>
+</kw>
+<kw name="Set Worksheet Value" library="RPA.Excel.Files">
+<arg>1</arg>
+<arg>2</arg>
+<arg>ID'S</arg>
+<doc>Alias for keyword ``Set cell value``, see the original keyword
+for documentation.</doc>
+<status status="PASS" starttime="20221222 05:00:00.715" endtime="20221222 05:00:00.715"/>
+</kw>
+<kw name="Append Rows To Worksheet" library="RPA.Excel.Files">
+<arg>${result1}</arg>
+<doc>Append values to the end of the worksheet.</doc>
+<status status="PASS" starttime="20221222 05:00:00.716" endtime="20221222 05:00:00.717"/>
+</kw>
+<kw name="Save Workbook" library="RPA.Excel.Files">
+<arg>C:/Users/mourya.dinesh/Documents/python bot/op.xlsx</arg>
+<doc>Save the active workbook.</doc>
+<status status="PASS" starttime="20221222 05:00:00.717" endtime="20221222 05:00:00.761"/>
+</kw>
+<return>
+<value>${result}</value>
+<status status="PASS" starttime="20221222 05:00:00.762" endtime="20221222 05:00:00.762"/>
+</return>
+<msg timestamp="20221222 05:00:00.763" level="INFO">${result} = (['Version Type:', 'MAC-1:', 'MAC-2:', 'MAC-3:', 'MAC-4:', 'MAC-5:', 'MAC-6:', 'MAC-7:', 'MAC-15:', 'MAC-16:', 'MAC-17:', 'MAC-18:', 'MAC-19:', 'MAC-20:', 'MAC-21:', 'MAC-29:', 'MAC-30:', 'MAC-31:', '...</msg>
+<status status="PASS" starttime="20221222 05:00:00.646" endtime="20221222 05:00:00.763"/>
+</kw>
+<kw name="convert the pdf to text file">
+<arg>${files}</arg>
+<kw name="Create File" library="RPA.FileSystem">
+<var>${text}</var>
+<arg>${file_name}.txt</arg>
+<arg>overwrite=${True}</arg>
+<doc>Creates a new text file, and writes content if any is given.</doc>
+<msg timestamp="20221222 05:00:00.768" level="INFO">${text} = None</msg>
+<status status="PASS" starttime="20221222 05:00:00.765" endtime="20221222 05:00:00.768"/>
+</kw>
+<status status="PASS" starttime="20221222 05:00:00.764" endtime="20221222 05:00:00.769"/>
+</kw>
+<kw name="Append to file">
+<arg>${result}</arg>
+<arg>${files}</arg>
+<for flavor="IN">
+<var>${ele}</var>
+<value>@{list}</value>
+<iter>
+<var name="${ele}">['Version Type:', 'MAC-1:', 'MAC-2:', 'MAC-3:', 'MAC-4:', 'MAC-5:', 'MAC-6:', 'MAC-7:', 'MAC-15:', 'MAC-16:', 'MAC-17:', 'MAC-18:', 'MAC-19:', 'MAC-20:', 'MAC-21:', 'MAC-29:', 'MAC-30:', 'MAC-31:', 'M...</var>
+<kw name="Append To File" library="RPA.FileSystem">
+<arg>${file_name}.txt</arg>
+<arg>${ele}+"\n"</arg>
+<doc>Appends text to the given file.</doc>
+<status status="PASS" starttime="20221222 05:00:00.774" endtime="20221222 05:00:00.781"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${list}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221222 05:00:00.784" level="INFO">(['Version Type:', 'MAC-1:', 'MAC-2:', 'MAC-3:', 'MAC-4:', 'MAC-5:', 'MAC-6:', 'MAC-7:', 'MAC-15:', 'MAC-16:', 'MAC-17:', 'MAC-18:', 'MAC-19:', 'MAC-20:', 'MAC-21:', 'MAC-29:', 'MAC-30:', 'MAC-31:', 'MAC-32:', 'MAC-33:', 'MAC-34:', 'MAC-35:'], ['22D28', '0004F324B9F4', '0004F3248D58', '0004F325B187', '0004F3248499', '0004F3246D3C', '0004F3246ABB', '0004F3259326', '0004F324AE0F', '0004F325B544', '0004F3261645', '0004F3246EFE', '0004F3246EF9', '0004F3239A3B', '0004F325B845', '0004F324AC7F', '0004F32489E3', '0004F325BDD7', '0004F3246EE2', '0004F3246A87', '0004F323EFAF', '0004F325B9F4'])</msg>
+<status status="PASS" starttime="20221222 05:00:00.783" endtime="20221222 05:00:00.784"/>
+</kw>
+<status status="PASS" starttime="20221222 05:00:00.772" endtime="20221222 05:00:00.784"/>
+</iter>
+<iter>
+<var name="${ele}">['22D28', '0004F324B9F4', '0004F3248D58', '0004F325B187', '0004F3248499', '0004F3246D3C', '0004F3246ABB', '0004F3259326', '0004F324AE0F', '0004F325B544', '0004F3261645', '0004F3246EFE', '0004F3246EF9'...</var>
+<kw name="Append To File" library="RPA.FileSystem">
+<arg>${file_name}.txt</arg>
+<arg>${ele}+"\n"</arg>
+<doc>Appends text to the given file.</doc>
+<status status="PASS" starttime="20221222 05:00:00.786" endtime="20221222 05:00:00.804"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${list}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221222 05:00:00.808" level="INFO">(['Version Type:', 'MAC-1:', 'MAC-2:', 'MAC-3:', 'MAC-4:', 'MAC-5:', 'MAC-6:', 'MAC-7:', 'MAC-15:', 'MAC-16:', 'MAC-17:', 'MAC-18:', 'MAC-19:', 'MAC-20:', 'MAC-21:', 'MAC-29:', 'MAC-30:', 'MAC-31:', 'MAC-32:', 'MAC-33:', 'MAC-34:', 'MAC-35:'], ['22D28', '0004F324B9F4', '0004F3248D58', '0004F325B187', '0004F3248499', '0004F3246D3C', '0004F3246ABB', '0004F3259326', '0004F324AE0F', '0004F325B544', '0004F3261645', '0004F3246EFE', '0004F3246EF9', '0004F3239A3B', '0004F325B845', '0004F324AC7F', '0004F32489E3', '0004F325BDD7', '0004F3246EE2', '0004F3246A87', '0004F323EFAF', '0004F325B9F4'])</msg>
+<status status="PASS" starttime="20221222 05:00:00.806" endtime="20221222 05:00:00.809"/>
+</kw>
+<status status="PASS" starttime="20221222 05:00:00.785" endtime="20221222 05:00:00.810"/>
+</iter>
+<status status="PASS" starttime="20221222 05:00:00.771" endtime="20221222 05:00:00.810"/>
+</for>
+<status status="PASS" starttime="20221222 05:00:00.770" endtime="20221222 05:00:00.811"/>
+</kw>
+<status status="PASS" starttime="20221222 04:59:59.729" endtime="20221222 05:00:00.811"/>
+</iter>
+<iter>
+<var name="${files}">C:/Users/mourya.dinesh/Desktop/pdf/36010 Attachment_B_SWI 204_Rev I pg 13.pdf</var>
+<kw name="check tha correct path">
+<arg>${files}</arg>
+<kw name="Normalize Path" library="RPA.FileSystem">
+<var>${st}</var>
+<arg>${files}</arg>
+<doc>Removes redundant separators or up-level references from path.</doc>
+<msg timestamp="20221222 05:00:00.814" level="INFO">${st} = C:\Users\mourya.dinesh\Desktop\pdf\36010 Attachment_B_SWI 204_Rev I pg 13.pdf</msg>
+<status status="PASS" starttime="20221222 05:00:00.813" endtime="20221222 05:00:00.815"/>
+</kw>
+<status status="PASS" starttime="20221222 05:00:00.812" endtime="20221222 05:00:00.816"/>
+</kw>
+<kw name="check wheather it is a pdf or not">
+<arg>${files}</arg>
+<kw name="Get File Extension" library="RPA.FileSystem">
+<var>${var}</var>
+<arg>${files}</arg>
+<doc>Returns the suffix for the file.</doc>
+<msg timestamp="20221222 05:00:00.823" level="INFO">${var} = .pdf</msg>
+<status status="PASS" starttime="20221222 05:00:00.819" endtime="20221222 05:00:00.825"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${var}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221222 05:00:00.832" level="INFO">.pdf</msg>
+<status status="PASS" starttime="20221222 05:00:00.829" endtime="20221222 05:00:00.833"/>
+</kw>
+<status status="PASS" starttime="20221222 05:00:00.816" endtime="20221222 05:00:00.833"/>
+</kw>
+<kw name="check the lenght of pdf">
+<arg>${files}</arg>
+<kw name="Get Length" library="BuiltIn">
+<var>${length}</var>
+<arg>${files}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20221222 05:00:00.836" level="INFO">Length is 77</msg>
+<msg timestamp="20221222 05:00:00.836" level="INFO">${length} = 77</msg>
+<status status="PASS" starttime="20221222 05:00:00.835" endtime="20221222 05:00:00.837"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${length}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221222 05:00:00.843" level="INFO">77</msg>
+<status status="PASS" starttime="20221222 05:00:00.837" endtime="20221222 05:00:00.847"/>
+</kw>
+<status status="PASS" starttime="20221222 05:00:00.834" endtime="20221222 05:00:00.849"/>
+</kw>
+<kw name="validate text from pdf and extract data">
+<arg>${files}</arg>
+<kw name="Get Text From Pdf" library="RPA.PDF">
+<var>${text}</var>
+<arg>${files}</arg>
+<arg>trim=False</arg>
+<doc>Get text from set of pages in source PDF document.</doc>
+<msg timestamp="20221222 05:00:01.684" level="INFO">${text} = {1: ' \nSWI 204 \nREVISION:  I \nTITLE: \nF827 WBM Field Programming Fixture Operating Procedure \nAttachment  B: WBM Software Update Data Sheet \nCustomer Information  (Name, City, etc.) \nISSUE DATE...</msg>
+<status status="PASS" starttime="20221222 05:00:00.853" endtime="20221222 05:00:01.684"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221222 05:00:01.686" level="INFO">{1: ' \nSWI 204 \nREVISION:  I \nTITLE: \nF827 WBM Field Programming Fixture Operating Procedure \nAttachment  B: WBM Software Update Data Sheet \nCustomer Information  (Name, City, etc.) \nISSUE DATE: \nSEE STAMP \nEFFECTIVE DATE:  \nSEE STAMP \nPAGE 1 OF 1 \nF827 Asset Number \n \nVisual identifier Used? \nidentifier or attach a duplicate to this page:  \nUsing the matrix below, select the WBM software to be installed. *Only one pump/WBM combination may be selected per datasheet. \n Yes – Describe the \n No \n \nCompatible Module type \nSoftware PN / Version to be installed  \nCompatible \nPump Version \nV6 \nV6.02.xx \nV6.05.xx  \nV8 \nV6, V8 \nV6, V8, V9 \nV6, V8, V9 \nPN 35783, Version 16D38 (B &amp; B/G) \nPN 35783, Version 16D38 (B &amp; B/G) \nPN 35784, Version 17D19 (B/G) \nPN 35784, Version 20D32 (A/B/G/N) \nPN 35785, Version 22D28 (A/B/G/N) \nPN 35785, Version 22D28 (A/B/G/N) \nModule Type: \nVersion of Software to Be Installed: \n \n \nhe MAC Addresses below have been verified to be updated to the software version selected above \nMAC Addresses \n \n \n \n \n  T\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nName (print) \n \n \n \nSignature  \n \nDate \n \n \nBAXTER CONFIDENTIAL – INTERNAL USE ONLY \n35083 \n35162 \n35195 \n35223 \n36010 \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nAttachment B_SWI 204/I\n'}</msg>
+<status status="PASS" starttime="20221222 05:00:01.685" endtime="20221222 05:00:01.686"/>
+</kw>
+<status status="PASS" starttime="20221222 05:00:00.851" endtime="20221222 05:00:01.687"/>
+</kw>
+<kw name="extract text data from pdf and import to Excel">
+<var>${result}</var>
+<arg>${files}</arg>
+<kw name="Pdfreader" library="task">
+<var>${result}</var>
+<arg>${files}</arg>
+<msg timestamp="20221222 05:00:01.787" level="INFO">22D28</msg>
+<msg timestamp="20221222 05:00:01.789" level="INFO">${result} = (['Version Type:', 'MAC-1:', 'MAC-2:', 'MAC-3:', 'MAC-4:', 'MAC-5:', 'MAC-6:', 'MAC-7:', 'MAC-8:', 'MAC-9:', 'MAC-10:', 'MAC-11:', 'MAC-12:', 'MAC-13:', 'MAC-14:', 'MAC-15:', 'MAC-16:', 'MAC-17:', 'MA...</msg>
+<status status="PASS" starttime="20221222 05:00:01.691" endtime="20221222 05:00:01.790"/>
+</kw>
+<kw name="Get File Name" library="RPA.FileSystem">
+<var>${output}</var>
+<arg>${files}</arg>
+<doc>Returns only the full file name portion of a path.</doc>
+<msg timestamp="20221222 05:00:01.795" level="INFO">${output} = 36010 Attachment_B_SWI 204_Rev I pg 13.pdf</msg>
+<status status="PASS" starttime="20221222 05:00:01.793" endtime="20221222 05:00:01.796"/>
+</kw>
+<kw name="Split String" library="String">
+<var>${output}</var>
+<arg>${output}</arg>
+<arg>separator=SWI</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20221222 05:00:01.799" level="INFO">${output} = ['36010 Attachment_B_', ' 204_Rev I pg 13.pdf']</msg>
+<status status="PASS" starttime="20221222 05:00:01.797" endtime="20221222 05:00:01.799"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${result1}</var>
+<arg>version=${result}[0]</arg>
+<arg>Mac_id=${result}[1]</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20221222 05:00:01.801" level="INFO">${result1} = {'version': ['Version Type:', 'MAC-1:', 'MAC-2:', 'MAC-3:', 'MAC-4:', 'MAC-5:', 'MAC-6:', 'MAC-7:', 'MAC-8:', 'MAC-9:', 'MAC-10:', 'MAC-11:', 'MAC-12:', 'MAC-13:', 'MAC-14:', 'MAC-15:', 'MAC-16:', 'MA...</msg>
+<status status="PASS" starttime="20221222 05:00:01.800" endtime="20221222 05:00:01.802"/>
+</kw>
+<kw name="Set Worksheet Value" library="RPA.Excel.Files">
+<arg>1</arg>
+<arg>1</arg>
+<arg>Name</arg>
+<doc>Alias for keyword ``Set cell value``, see the original keyword
+for documentation.</doc>
+<status status="PASS" starttime="20221222 05:00:01.802" endtime="20221222 05:00:01.803"/>
+</kw>
+<kw name="Set Worksheet Value" library="RPA.Excel.Files">
+<arg>1</arg>
+<arg>2</arg>
+<arg>ID'S</arg>
+<doc>Alias for keyword ``Set cell value``, see the original keyword
+for documentation.</doc>
+<status status="PASS" starttime="20221222 05:00:01.804" endtime="20221222 05:00:01.810"/>
+</kw>
+<kw name="Append Rows To Worksheet" library="RPA.Excel.Files">
+<arg>${result1}</arg>
+<doc>Append values to the end of the worksheet.</doc>
+<status status="PASS" starttime="20221222 05:00:01.811" endtime="20221222 05:00:01.814"/>
+</kw>
+<kw name="Save Workbook" library="RPA.Excel.Files">
+<arg>C:/Users/mourya.dinesh/Documents/python bot/op.xlsx</arg>
+<doc>Save the active workbook.</doc>
+<status status="PASS" starttime="20221222 05:00:01.814" endtime="20221222 05:00:01.861"/>
+</kw>
+<return>
+<value>${result}</value>
+<status status="PASS" starttime="20221222 05:00:01.862" endtime="20221222 05:00:01.862"/>
+</return>
+<msg timestamp="20221222 05:00:01.863" level="INFO">${result} = (['Version Type:', 'MAC-1:', 'MAC-2:', 'MAC-3:', 'MAC-4:', 'MAC-5:', 'MAC-6:', 'MAC-7:', 'MAC-8:', 'MAC-9:', 'MAC-10:', 'MAC-11:', 'MAC-12:', 'MAC-13:', 'MAC-14:', 'MAC-15:', 'MAC-16:', 'MAC-17:', 'MA...</msg>
+<status status="PASS" starttime="20221222 05:00:01.689" endtime="20221222 05:00:01.863"/>
+</kw>
+<kw name="convert the pdf to text file">
+<arg>${files}</arg>
+<kw name="Create File" library="RPA.FileSystem">
+<var>${text}</var>
+<arg>${file_name}.txt</arg>
+<arg>overwrite=${True}</arg>
+<doc>Creates a new text file, and writes content if any is given.</doc>
+<msg timestamp="20221222 05:00:01.869" level="INFO">${text} = None</msg>
+<status status="PASS" starttime="20221222 05:00:01.865" endtime="20221222 05:00:01.870"/>
+</kw>
+<status status="PASS" starttime="20221222 05:00:01.864" endtime="20221222 05:00:01.871"/>
+</kw>
+<kw name="Append to file">
+<arg>${result}</arg>
+<arg>${files}</arg>
+<for flavor="IN">
+<var>${ele}</var>
+<value>@{list}</value>
+<iter>
+<var name="${ele}">['Version Type:', 'MAC-1:', 'MAC-2:', 'MAC-3:', 'MAC-4:', 'MAC-5:', 'MAC-6:', 'MAC-7:', 'MAC-8:', 'MAC-9:', 'MAC-10:', 'MAC-11:', 'MAC-12:', 'MAC-13:', 'MAC-14:', 'MAC-15:', 'MAC-16:', 'MAC-17:', 'MAC...</var>
+<kw name="Append To File" library="RPA.FileSystem">
+<arg>${file_name}.txt</arg>
+<arg>${ele}+"\n"</arg>
+<doc>Appends text to the given file.</doc>
+<status status="PASS" starttime="20221222 05:00:01.880" endtime="20221222 05:00:01.900"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${list}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221222 05:00:01.906" level="INFO">(['Version Type:', 'MAC-1:', 'MAC-2:', 'MAC-3:', 'MAC-4:', 'MAC-5:', 'MAC-6:', 'MAC-7:', 'MAC-8:', 'MAC-9:', 'MAC-10:', 'MAC-11:', 'MAC-12:', 'MAC-13:', 'MAC-14:', 'MAC-15:', 'MAC-16:', 'MAC-17:', 'MAC-18:', 'MAC-19:', 'MAC-20:', 'MAC-21:', 'MAC-22:', 'MAC-23:', 'MAC-24:', 'MAC-25:', 'MAC-26:', 'MAC-27:', 'MAC-28:'], ['22D28', '0004F325A3F8', '0004F325931D', '0004F3258E93', '0004F3258DCC', '0004F325BF64', '0004F3266E2A', '0004F3249292', '0004F3266E38', '0004F3267C11', '0004F324AC3D', '0004F3267CFF', '0004F324B6DB', '0004F324B61F', '0004F3248D52', '0004F3266DB0', '0004F32489B7', '0004F325B858', '0004F325A003', '0004F325AE5A', '0004F325ACE1', '0004F325AC8D', '0004F32592F1', '0004F325A308', '0004F325A4A7', '0004F3259EC9', '0004F3258772', '0004F3258993', '0004F3259FF1'])</msg>
+<status status="PASS" starttime="20221222 05:00:01.903" endtime="20221222 05:00:01.909"/>
+</kw>
+<status status="PASS" starttime="20221222 05:00:01.879" endtime="20221222 05:00:01.911"/>
+</iter>
+<iter>
+<var name="${ele}">['22D28', '0004F325A3F8', '0004F325931D', '0004F3258E93', '0004F3258DCC', '0004F325BF64', '0004F3266E2A', '0004F3249292', '0004F3266E38', '0004F3267C11', '0004F324AC3D', '0004F3267CFF', '0004F324B6DB'...</var>
+<kw name="Append To File" library="RPA.FileSystem">
+<arg>${file_name}.txt</arg>
+<arg>${ele}+"\n"</arg>
+<doc>Appends text to the given file.</doc>
+<status status="PASS" starttime="20221222 05:00:01.914" endtime="20221222 05:00:01.961"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${list}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221222 05:00:01.965" level="INFO">(['Version Type:', 'MAC-1:', 'MAC-2:', 'MAC-3:', 'MAC-4:', 'MAC-5:', 'MAC-6:', 'MAC-7:', 'MAC-8:', 'MAC-9:', 'MAC-10:', 'MAC-11:', 'MAC-12:', 'MAC-13:', 'MAC-14:', 'MAC-15:', 'MAC-16:', 'MAC-17:', 'MAC-18:', 'MAC-19:', 'MAC-20:', 'MAC-21:', 'MAC-22:', 'MAC-23:', 'MAC-24:', 'MAC-25:', 'MAC-26:', 'MAC-27:', 'MAC-28:'], ['22D28', '0004F325A3F8', '0004F325931D', '0004F3258E93', '0004F3258DCC', '0004F325BF64', '0004F3266E2A', '0004F3249292', '0004F3266E38', '0004F3267C11', '0004F324AC3D', '0004F3267CFF', '0004F324B6DB', '0004F324B61F', '0004F3248D52', '0004F3266DB0', '0004F32489B7', '0004F325B858', '0004F325A003', '0004F325AE5A', '0004F325ACE1', '0004F325AC8D', '0004F32592F1', '0004F325A308', '0004F325A4A7', '0004F3259EC9', '0004F3258772', '0004F3258993', '0004F3259FF1'])</msg>
+<status status="PASS" starttime="20221222 05:00:01.963" endtime="20221222 05:00:01.966"/>
+</kw>
+<status status="PASS" starttime="20221222 05:00:01.913" endtime="20221222 05:00:01.966"/>
+</iter>
+<status status="PASS" starttime="20221222 05:00:01.877" endtime="20221222 05:00:01.967"/>
+</for>
+<status status="PASS" starttime="20221222 05:00:01.874" endtime="20221222 05:00:01.967"/>
+</kw>
+<status status="PASS" starttime="20221222 05:00:00.812" endtime="20221222 05:00:01.968"/>
+</iter>
+<iter>
+<var name="${files}">C:/Users/mourya.dinesh/Desktop/pdf/36010 Attachment_B_SWI 204_Rev I pg 14.pdf</var>
+<kw name="check tha correct path">
+<arg>${files}</arg>
+<kw name="Normalize Path" library="RPA.FileSystem">
+<var>${st}</var>
+<arg>${files}</arg>
+<doc>Removes redundant separators or up-level references from path.</doc>
+<msg timestamp="20221222 05:00:01.972" level="INFO">${st} = C:\Users\mourya.dinesh\Desktop\pdf\36010 Attachment_B_SWI 204_Rev I pg 14.pdf</msg>
+<status status="PASS" starttime="20221222 05:00:01.970" endtime="20221222 05:00:01.973"/>
+</kw>
+<status status="PASS" starttime="20221222 05:00:01.969" endtime="20221222 05:00:01.976"/>
+</kw>
+<kw name="check wheather it is a pdf or not">
+<arg>${files}</arg>
+<kw name="Get File Extension" library="RPA.FileSystem">
+<var>${var}</var>
+<arg>${files}</arg>
+<doc>Returns the suffix for the file.</doc>
+<msg timestamp="20221222 05:00:01.981" level="INFO">${var} = .pdf</msg>
+<status status="PASS" starttime="20221222 05:00:01.979" endtime="20221222 05:00:01.981"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${var}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221222 05:00:01.983" level="INFO">.pdf</msg>
+<status status="PASS" starttime="20221222 05:00:01.981" endtime="20221222 05:00:01.983"/>
+</kw>
+<status status="PASS" starttime="20221222 05:00:01.977" endtime="20221222 05:00:01.984"/>
+</kw>
+<kw name="check the lenght of pdf">
+<arg>${files}</arg>
+<kw name="Get Length" library="BuiltIn">
+<var>${length}</var>
+<arg>${files}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20221222 05:00:01.987" level="INFO">Length is 77</msg>
+<msg timestamp="20221222 05:00:01.988" level="INFO">${length} = 77</msg>
+<status status="PASS" starttime="20221222 05:00:01.986" endtime="20221222 05:00:01.989"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${length}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221222 05:00:01.994" level="INFO">77</msg>
+<status status="PASS" starttime="20221222 05:00:01.991" endtime="20221222 05:00:01.994"/>
+</kw>
+<status status="PASS" starttime="20221222 05:00:01.984" endtime="20221222 05:00:01.995"/>
+</kw>
+<kw name="validate text from pdf and extract data">
+<arg>${files}</arg>
+<kw name="Get Text From Pdf" library="RPA.PDF">
+<var>${text}</var>
+<arg>${files}</arg>
+<arg>trim=False</arg>
+<doc>Get text from set of pages in source PDF document.</doc>
+<msg timestamp="20221222 05:00:02.929" level="INFO">${text} = {1: ' \nSWI 204 \nREVISION:  I \nTITLE: \nF827 WBM Field Programming Fixture Operating Procedure \nAttachment  B: WBM Software Update Data Sheet \nCustomer Information  (Name, City, etc.) \nISSUE DATE...</msg>
+<status status="PASS" starttime="20221222 05:00:01.997" endtime="20221222 05:00:02.930"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221222 05:00:02.931" level="INFO">{1: ' \nSWI 204 \nREVISION:  I \nTITLE: \nF827 WBM Field Programming Fixture Operating Procedure \nAttachment  B: WBM Software Update Data Sheet \nCustomer Information  (Name, City, etc.) \nISSUE DATE: \nSEE STAMP \nEFFECTIVE DATE:  \nSEE STAMP \nPAGE 1 OF 1 \nF827 Asset Number \n \nVisual identifier Used? \nidentifier or attach a duplicate to this page:  \nUsing the matrix below, select the WBM software to be installed. *Only one pump/WBM combination may be selected per datasheet. \n Yes – Describe the \n No \n \nCompatible Module type \nSoftware PN / Version to be installed  \nCompatible \nPump Version \nV6 \nV6.02.xx \nV6.05.xx  \nV8 \nV6, V8 \nV6, V8, V9 \nV6, V8, V9 \nPN 35783, Version 16D38 (B &amp; B/G) \nPN 35783, Version 16D38 (B &amp; B/G) \nPN 35784, Version 17D19 (B/G) \nPN 35784, Version 20D32 (A/B/G/N) \nPN 35785, Version 22D28 (A/B/G/N) \nPN 35785, Version 22D28 (A/B/G/N) \nModule Type: \nVersion of Software to Be Installed: \n \n \nhe MAC Addresses below have been verified to be updated to the software version selected above \nMAC Addresses \n \n \n \n \n  T\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nName (print) \n \n \n \nSignature  \n \nDate \n \n \nBAXTER CONFIDENTIAL – INTERNAL USE ONLY \n35083 \n35162 \n35195 \n35223 \n36010 \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nAttachment B_SWI 204/I\n'}</msg>
+<status status="PASS" starttime="20221222 05:00:02.931" endtime="20221222 05:00:02.932"/>
+</kw>
+<status status="PASS" starttime="20221222 05:00:01.996" endtime="20221222 05:00:02.932"/>
+</kw>
+<kw name="extract text data from pdf and import to Excel">
+<var>${result}</var>
+<arg>${files}</arg>
+<kw name="Pdfreader" library="task">
+<var>${result}</var>
+<arg>${files}</arg>
+<msg timestamp="20221222 05:00:03.015" level="INFO">22D28</msg>
+<msg timestamp="20221222 05:00:03.016" level="INFO">${result} = (['Version Type:', 'MAC-1:', 'MAC-2:', 'MAC-3:', 'MAC-4:', 'MAC-5:', 'MAC-6:', 'MAC-7:', 'MAC-8:', 'MAC-9:', 'MAC-10:', 'MAC-11:', 'MAC-12:', 'MAC-13:', 'MAC-14:', 'MAC-29:', 'MAC-30:', 'MAC-31:', 'MA...</msg>
+<status status="PASS" starttime="20221222 05:00:02.934" endtime="20221222 05:00:03.016"/>
+</kw>
+<kw name="Get File Name" library="RPA.FileSystem">
+<var>${output}</var>
+<arg>${files}</arg>
+<doc>Returns only the full file name portion of a path.</doc>
+<msg timestamp="20221222 05:00:03.018" level="INFO">${output} = 36010 Attachment_B_SWI 204_Rev I pg 14.pdf</msg>
+<status status="PASS" starttime="20221222 05:00:03.017" endtime="20221222 05:00:03.018"/>
+</kw>
+<kw name="Split String" library="String">
+<var>${output}</var>
+<arg>${output}</arg>
+<arg>separator=SWI</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20221222 05:00:03.020" level="INFO">${output} = ['36010 Attachment_B_', ' 204_Rev I pg 14.pdf']</msg>
+<status status="PASS" starttime="20221222 05:00:03.019" endtime="20221222 05:00:03.020"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${result1}</var>
+<arg>version=${result}[0]</arg>
+<arg>Mac_id=${result}[1]</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20221222 05:00:03.024" level="INFO">${result1} = {'version': ['Version Type:', 'MAC-1:', 'MAC-2:', 'MAC-3:', 'MAC-4:', 'MAC-5:', 'MAC-6:', 'MAC-7:', 'MAC-8:', 'MAC-9:', 'MAC-10:', 'MAC-11:', 'MAC-12:', 'MAC-13:', 'MAC-14:', 'MAC-29:', 'MAC-30:', 'MA...</msg>
+<status status="PASS" starttime="20221222 05:00:03.021" endtime="20221222 05:00:03.025"/>
+</kw>
+<kw name="Set Worksheet Value" library="RPA.Excel.Files">
+<arg>1</arg>
+<arg>1</arg>
+<arg>Name</arg>
+<doc>Alias for keyword ``Set cell value``, see the original keyword
+for documentation.</doc>
+<status status="PASS" starttime="20221222 05:00:03.026" endtime="20221222 05:00:03.026"/>
+</kw>
+<kw name="Set Worksheet Value" library="RPA.Excel.Files">
+<arg>1</arg>
+<arg>2</arg>
+<arg>ID'S</arg>
+<doc>Alias for keyword ``Set cell value``, see the original keyword
+for documentation.</doc>
+<status status="PASS" starttime="20221222 05:00:03.027" endtime="20221222 05:00:03.028"/>
+</kw>
+<kw name="Append Rows To Worksheet" library="RPA.Excel.Files">
+<arg>${result1}</arg>
+<doc>Append values to the end of the worksheet.</doc>
+<status status="PASS" starttime="20221222 05:00:03.029" endtime="20221222 05:00:03.030"/>
+</kw>
+<kw name="Save Workbook" library="RPA.Excel.Files">
+<arg>C:/Users/mourya.dinesh/Documents/python bot/op.xlsx</arg>
+<doc>Save the active workbook.</doc>
+<status status="PASS" starttime="20221222 05:00:03.031" endtime="20221222 05:00:03.070"/>
+</kw>
+<return>
+<value>${result}</value>
+<status status="PASS" starttime="20221222 05:00:03.070" endtime="20221222 05:00:03.072"/>
+</return>
+<msg timestamp="20221222 05:00:03.074" level="INFO">${result} = (['Version Type:', 'MAC-1:', 'MAC-2:', 'MAC-3:', 'MAC-4:', 'MAC-5:', 'MAC-6:', 'MAC-7:', 'MAC-8:', 'MAC-9:', 'MAC-10:', 'MAC-11:', 'MAC-12:', 'MAC-13:', 'MAC-14:', 'MAC-29:', 'MAC-30:', 'MAC-31:', 'MA...</msg>
+<status status="PASS" starttime="20221222 05:00:02.933" endtime="20221222 05:00:03.075"/>
+</kw>
+<kw name="convert the pdf to text file">
+<arg>${files}</arg>
+<kw name="Create File" library="RPA.FileSystem">
+<var>${text}</var>
+<arg>${file_name}.txt</arg>
+<arg>overwrite=${True}</arg>
+<doc>Creates a new text file, and writes content if any is given.</doc>
+<msg timestamp="20221222 05:00:03.081" level="INFO">${text} = None</msg>
+<status status="PASS" starttime="20221222 05:00:03.078" endtime="20221222 05:00:03.082"/>
+</kw>
+<status status="PASS" starttime="20221222 05:00:03.075" endtime="20221222 05:00:03.082"/>
+</kw>
+<kw name="Append to file">
+<arg>${result}</arg>
+<arg>${files}</arg>
+<for flavor="IN">
+<var>${ele}</var>
+<value>@{list}</value>
+<iter>
+<var name="${ele}">['Version Type:', 'MAC-1:', 'MAC-2:', 'MAC-3:', 'MAC-4:', 'MAC-5:', 'MAC-6:', 'MAC-7:', 'MAC-8:', 'MAC-9:', 'MAC-10:', 'MAC-11:', 'MAC-12:', 'MAC-13:', 'MAC-14:', 'MAC-29:', 'MAC-30:', 'MAC-31:', 'MAC...</var>
+<kw name="Append To File" library="RPA.FileSystem">
+<arg>${file_name}.txt</arg>
+<arg>${ele}+"\n"</arg>
+<doc>Appends text to the given file.</doc>
+<status status="PASS" starttime="20221222 05:00:03.086" endtime="20221222 05:00:03.095"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${list}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221222 05:00:03.097" level="INFO">(['Version Type:', 'MAC-1:', 'MAC-2:', 'MAC-3:', 'MAC-4:', 'MAC-5:', 'MAC-6:', 'MAC-7:', 'MAC-8:', 'MAC-9:', 'MAC-10:', 'MAC-11:', 'MAC-12:', 'MAC-13:', 'MAC-14:', 'MAC-29:', 'MAC-30:', 'MAC-31:', 'MAC-32:', 'MAC-33:', 'MAC-34:', 'MAC-35:', 'MAC-36:', 'MAC-37:', 'MAC-38:', 'MAC-39:', 'MAC-40:', 'MAC-41:', 'MAC-42:'], ['22D28', '0004F325843E', '0004F3259993', '0004F325AD83', '0004F325AB34', '0004F3261127', '0004F3260BC9', '0004F3261604', '0004F32615FE', '0004F3260BFC', '0004F32612A8', '0004F3239A70', '0004F325D646', '0004F3266A9C', '0004F325A1F0', '0004F325B74F', '0004F3267437', '0004F326655A', '0004F325A182', '0004F32664D8', '0004F325ACE6', '0004F32580E6', '0004F32562FF', '0004F325A153', '0004F3257C98', '0004F325D523', '0004F325874B', '0004F3258925', '0004F3257E0F'])</msg>
+<status status="PASS" starttime="20221222 05:00:03.096" endtime="20221222 05:00:03.098"/>
+</kw>
+<status status="PASS" starttime="20221222 05:00:03.085" endtime="20221222 05:00:03.098"/>
+</iter>
+<iter>
+<var name="${ele}">['22D28', '0004F325843E', '0004F3259993', '0004F325AD83', '0004F325AB34', '0004F3261127', '0004F3260BC9', '0004F3261604', '0004F32615FE', '0004F3260BFC', '0004F32612A8', '0004F3239A70', '0004F325D646'...</var>
+<kw name="Append To File" library="RPA.FileSystem">
+<arg>${file_name}.txt</arg>
+<arg>${ele}+"\n"</arg>
+<doc>Appends text to the given file.</doc>
+<status status="PASS" starttime="20221222 05:00:03.100" endtime="20221222 05:00:03.120"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${list}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221222 05:00:03.124" level="INFO">(['Version Type:', 'MAC-1:', 'MAC-2:', 'MAC-3:', 'MAC-4:', 'MAC-5:', 'MAC-6:', 'MAC-7:', 'MAC-8:', 'MAC-9:', 'MAC-10:', 'MAC-11:', 'MAC-12:', 'MAC-13:', 'MAC-14:', 'MAC-29:', 'MAC-30:', 'MAC-31:', 'MAC-32:', 'MAC-33:', 'MAC-34:', 'MAC-35:', 'MAC-36:', 'MAC-37:', 'MAC-38:', 'MAC-39:', 'MAC-40:', 'MAC-41:', 'MAC-42:'], ['22D28', '0004F325843E', '0004F3259993', '0004F325AD83', '0004F325AB34', '0004F3261127', '0004F3260BC9', '0004F3261604', '0004F32615FE', '0004F3260BFC', '0004F32612A8', '0004F3239A70', '0004F325D646', '0004F3266A9C', '0004F325A1F0', '0004F325B74F', '0004F3267437', '0004F326655A', '0004F325A182', '0004F32664D8', '0004F325ACE6', '0004F32580E6', '0004F32562FF', '0004F325A153', '0004F3257C98', '0004F325D523', '0004F325874B', '0004F3258925', '0004F3257E0F'])</msg>
+<status status="PASS" starttime="20221222 05:00:03.121" endtime="20221222 05:00:03.126"/>
+</kw>
+<status status="PASS" starttime="20221222 05:00:03.099" endtime="20221222 05:00:03.127"/>
+</iter>
+<status status="PASS" starttime="20221222 05:00:03.084" endtime="20221222 05:00:03.128"/>
+</for>
+<status status="PASS" starttime="20221222 05:00:03.083" endtime="20221222 05:00:03.128"/>
+</kw>
+<status status="PASS" starttime="20221222 05:00:01.968" endtime="20221222 05:00:03.129"/>
+</iter>
+<status status="PASS" starttime="20221222 04:59:59.729" endtime="20221222 05:00:03.129"/>
+</for>
+<status status="PASS" starttime="20221222 04:59:59.663" endtime="20221222 05:00:03.131"/>
+</test>
+<doc>Battery Patch pdf file data extraction.
+A folder contains some Files needs to extract the data from the each file.
+Needs to find whether the file in the folder is a PDF Extension or not.
+If it is a PDF File, find the size of each file.
+After confirming the size of each file, iterate the files from a folder and extract the data from each folder</doc>
+<status status="PASS" starttime="20221222 04:59:52.661" endtime="20221222 05:00:03.135"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Consumer">Consumer</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221222 04:59:59.646" level="WARN">This is a deprecated import that will be removed in favor of RPA.Robocorp.WorkItems</msg>
+</errors>
+</robot>
